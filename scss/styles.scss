@@ -1,0 +1,145 @@
+.header{
+    background: url(../images/intro-bg.jpg) center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.header::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba($color: #000000, $alpha: 0.7);
+}
+.header .text-container{
+    z-index: 1;
+    h5{
+        animation: helloworld 1.5s ease-in;
+    }
+}
+.header .roles{
+    font-family: 'lora-regular', serif;
+    animation: roles 1.5s ease-in;
+}
+
+
+.header .social{
+    bottom: 50px;
+    animation: social 1.5s ease-in-out;
+    .gt:hover{
+        transform: scale(1.3);
+        transition: all 0.3s ease;
+    }
+    .insta:hover{
+        transform: scale(1.3);
+        transition: all 0.3s ease-in-out;
+    }
+    .fb:hover{
+        transform: scale(1.3);
+        transition: all 0.3s ease-in-out;
+    }
+    .ld:hover{
+        transform: scale(1.3);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+// about
+.about-img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.project:hover{
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+.services{
+    background: url('../images/bg.jpg') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.services::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($color: #000000, $alpha: 0.7);
+}
+.services .container{
+    z-index: 1;
+}
+
+// animation
+@keyframes helloworld{
+    0%{
+        opacity: 0;
+        transform: translateX(-2rem);
+    }
+    80%{
+        opacity: 0.5;
+        transform: translateX(1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes roles {
+    0%{
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+    80%{
+        opacity: 0.5;
+        transform: translateX(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes social{
+    0%{
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    80%{
+        opacity: 0.5;
+        transform: translateY(-0.5rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+// responsive
+@media(max-width: 767px){
+    .header .roles {
+        font-size: 1rem !important;
+    }
+    .header .button{
+        font-size: 1rem;
+    }
+    .header .social i {
+        font-size: 30px;
+    }
+    .about-content{
+        flex-direction: column;
+    }
+    .stats .stat{
+        border-right: 0 !important;
+        margin-bottom: 40px;
+        border-bottom:  var(--bs-dark) solid 1px;
+        padding-bottom: 20px;
+    }
+}
+
+
